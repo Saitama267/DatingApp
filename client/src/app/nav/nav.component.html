@@ -8,22 +8,34 @@
       <ng-container *ngIf="accountService.currentUser$ | async">
         <li class="nav-item">
           <a class="nav-link" routerLink="/members" routerLinkActive="active"
-            >Matches</a>
+            >Matches</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/lists" routerLinkActive="active"
-            >Lists</a>
+            >Lists</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/messages" routerLinkActive="active"
-            >Messages</a>
+            >Messages</a
+          >
         </li>
       </ng-container>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/errors" routerLinkActive="active"
+          >Errors</a
+        >
+      </li>
     </ul>
 
-    <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
+    <div
+      class="dropdown"
+      *ngIf="accountService.currentUser$ | async as user"
+      dropdown
+    >
       <a class="dropdown-toggle text-light text-decoration-none" dropdownToggle
-        >Welcome {{user.username | titlecase}}</a
+        >Welcome {{ user.username | titlecase }}</a
       >
       <div class="dropdown-menu mt-3" *dropdownMenu>
         <a class="dropdown-item">Edit Profile</a>
