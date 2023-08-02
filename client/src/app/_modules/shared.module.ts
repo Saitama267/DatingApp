@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ToastrModule } from 'ngx-toastr';
-import {TabsModule} from 'ngx-bootstrap/tabs';
+import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
-
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [],
@@ -13,15 +14,19 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ToastrModule.forRoot({
-      positionClass:'toast-bottom-right'
+      positionClass: 'toast-bottom-right',
     }),
-    NgxGalleryModule
+    NgxGalleryModule,
+    NgxSpinnerModule.forRoot({ type: 'line-scale-party' }),
+    FileUploadModule,
   ],
-  exports:[
+  exports: [
     BsDropdownModule,
     ToastrModule,
     TabsModule,
-    NgxGalleryModule
-  ]
+    NgxGalleryModule,
+    NgxSpinnerModule,
+    FileUploadModule,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}
