@@ -7,12 +7,10 @@ using API.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace API.Controllers
 {
-  public class AccountController : BaseApiController
+    public class AccountController : BaseApiController
   {
     private readonly DataContext _context;
     private readonly ITokenService _tokenService;
