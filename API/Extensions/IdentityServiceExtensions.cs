@@ -31,7 +31,14 @@ namespace API.Extensions
             ValidateAudience = false
           };
         });
-        return services;
+
+      services.AddAuthorization(opt=>
+      {
+        opt.AddPolicy("RequreAdminRole", policy=>policy.RequireRole("Admin"));  
+        opt.AddPolicy("ModeratePhotoRole", policy=>policy.RequireRole("Admin","Moderator"));  
+      });
+
+      return services;
     }
   }
 }
