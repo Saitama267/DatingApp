@@ -1,4 +1,4 @@
-import { User } from '../_models/user';
+import { User } from './user';
 
 export class UserParams {
   gender: string;

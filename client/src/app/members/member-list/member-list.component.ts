@@ -3,7 +3,7 @@ import { Observable, take } from 'rxjs';
 import { Member } from 'src/app/_models/member';
 import { Pagination } from 'src/app/_models/pagination';
 import { User } from 'src/app/_models/user';
-import { UserParams } from 'src/app/_modules/userParams';
+import { UserParams } from 'src/app/_models/userParams';
 import { AccountService } from 'src/app/_services/account.service';
 import { MembersService } from 'src/app/_services/members.service';
 
@@ -45,7 +45,7 @@ export class MemberListComponent implements OnInit {
     }
   }
   resetFilters() {
-    this.userParams=this.membersService.resetUserParams();
+    this.userParams = this.membersService.resetUserParams();
     this.loadMembers();
   }
   pageChanged(event: any) {

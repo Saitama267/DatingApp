@@ -4,10 +4,10 @@ import { environment } from 'src/environments/environment';
 import { Member } from '../_models/member';
 import { map, of, take } from 'rxjs';
 import { PaginatedResult } from '../_models/pagination';
-import { UserParams } from '../_modules/userParams';
+import { UserParams } from '../_models/userParams';
 import { AccountService } from './account.service';
 import { User } from '../_models/user';
-import { getPaginatedResult, getPaginationHeaders } from '../_service/paginationHelper';
+import { getPaginatedResult, getPaginationHeaders } from './paginationHelper';
 
 @Injectable({
   providedIn: 'root',
@@ -41,8 +41,8 @@ export class MembersService {
     this.userParams = params;
   }
 
-  resetUserParams(){
-    if (this.user){
+  resetUserParams() {
+    if (this.user) {
       this.userParams = new UserParams(this.user);
       return this.userParams;
     }
@@ -105,18 +105,19 @@ export class MembersService {
     return this.http.delete(this.baseUrl + 'users/delete-photo/' + photoId);
   }
 
-  addLike(username:string){
-    return this.http.post(this.baseUrl+"likes/"+username,{});
+  addLike(username: string) {
+    return this.http.post(this.baseUrl + 'likes/' + username, {});
   }
 
-  getLikes(predicate:string, pageNumber:number, pageSize:number){
-    let params = getPaginationHeaders(pageNumber,pageSize);
+  getLikes(predicate: string, pageNumber: number, pageSize: number) {
+    let params = getPaginationHeaders(pageNumber, pageSize);
 
-    params = params.append('predicate',predicate);
+    params = params.append('predicate', predicate);
 
-
-    return getPaginatedResult<Member[]>(this.baseUrl +'likes', params,this.http);
+    return getPaginatedResult<Member[]>(
+      this.baseUrl + 'likes',
+      params,
+      this.http
+    );
   }
-
-  
 }

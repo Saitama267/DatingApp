@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../_models/message';
 import { Pagination } from '../_models/pagination';
-import { MessageService } from '../_service/message.service';
+import { MessageService } from '../_services/message.service';
 
 @Component({
   selector: 'app-messages',
@@ -23,22 +23,26 @@ export class MessagesComponent implements OnInit {
   }
 
   loadMessages() {
-    this.loading= true
+    this.loading = true;
     this.messageService
       .getMessages(this.pageNumber, this.pageSize, this.container)
       .subscribe({
         next: (response) => {
           this.messages = response.result;
           this.pagination = response.pagination;
-          this.loading=false;
+          this.loading = false;
         },
       });
   }
 
-  deleteMessage(id:number){
+  deleteMessage(id: number) {
     this.messageService.deleteMessage(id).subscribe({
-      next: _=> this.messages?.splice(this.messages.findIndex(m=>m.id===id),1)
-    })
+      next: (_) =>
+        this.messages?.splice(
+          this.messages.findIndex((m) => m.id === id),
+          1
+        ),
+    });
   }
 
   pageChanged(event: any) {
