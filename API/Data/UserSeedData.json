@@ -1,6 +1,6 @@
 [
   {
-    "Username": "Raquel",
+    "UserName": "Raquel",
     "Gender": "female",
     "DateOfBirth": "1989-09-19",
     "KnownAs": "Raquel",
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "Username": "Marcella",
+    "UserName": "Marcella",
     "Gender": "female",
     "DateOfBirth": "1994-04-24",
     "KnownAs": "Marcella",
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "Username": "Lucia",
+    "UserName": "Lucia",
     "Gender": "female",
     "DateOfBirth": "1999-10-28",
     "KnownAs": "Lucia",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "Username": "June",
+    "UserName": "June",
     "Gender": "female",
     "DateOfBirth": "1981-06-19",
     "KnownAs": "June",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "Username": "Faith",
+    "UserName": "Faith",
     "Gender": "female",
     "DateOfBirth": "1989-04-14",
     "KnownAs": "Faith",
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "Username": "Mills",
+    "UserName": "Mills",
     "Gender": "male",
     "DateOfBirth": "1953-10-03",
     "KnownAs": "Mills",
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "Username": "Stanley",
+    "UserName": "Stanley",
     "Gender": "male",
     "DateOfBirth": "1973-11-26",
     "KnownAs": "Stanley",
@@ -133,7 +133,7 @@
     ]
   },
   {
-    "Username": "Mcfadden",
+    "UserName": "Mcfadden",
     "Gender": "male",
     "DateOfBirth": "1984-01-30",
     "KnownAs": "Mcfadden",
@@ -152,7 +152,7 @@
     ]
   },
   {
-    "Username": "Graham",
+    "UserName": "Graham",
     "Gender": "male",
     "DateOfBirth": "1994-03-16",
     "KnownAs": "Graham",
@@ -171,7 +171,7 @@
     ]
   },
   {
-    "Username": "Pitts",
+    "UserName": "Pitts",
     "Gender": "male",
     "DateOfBirth": "1974-03-27",
     "KnownAs": "Pitts",
